@@ -3,25 +3,32 @@ package Bond_JamesBond;
 import java.util.Random;
 
 public class Vault {
-	boolean unlocked;
-int secretCode = new Random().nextInt(1_000_001);
-public static void main(String [] args) {
+	int secretCode = new Random().nextInt(1_000_001);
+	static boolean unlocked;
+	public static void main(String [] args) {
 Vault A = new Vault();
-}
-
-
-Vault(){
-tryCode(i);
-}
-boolean tryCode(int code){
-if(code == secretCode) {
-	 unlocked = true;
+JamesBond J = new JamesBond();
+J.findCode(A);
+if(unlocked = true) {
+	System.out.println("You did it!");
 }
 else {
-	 unlocked = false;
+	System.out.println("You stink");
 }
-return unlocked;
 }
+	Vault(){
+}
+	
+	boolean tryCode(int code){
+		if(code == secretCode) {
+			 unlocked = true;
+		}
+		else {
+			 unlocked = false;
+		}
+		return unlocked;
+		}
+
 	 
 
 }
